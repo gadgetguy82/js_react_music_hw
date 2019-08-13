@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
+import MusicSelector from '../components/MusicSelector';
+import MusicDetail from '../components/MusicDetail';
 
 class MusicBox extends Component {
   render() {
     return(
-      <h1>Hi</h1>
+      <div>
+        <MusicSelector />
+        <MusicDetail />
+      </div>
     );
   }
 }
