@@ -1,0 +1,9 @@
+.music-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-image {
+  display: flex;
+  margin: 10px;
+}
