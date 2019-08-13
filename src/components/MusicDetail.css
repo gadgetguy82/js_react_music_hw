@@ -1,9 +1,18 @@
 .music-detail {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .info-image {
   display: flex;
   margin: 10px;
+}
+
+.info {
+  margin-right: 10px;
+}
+
+img {
+  margin-left: 10px;
 }

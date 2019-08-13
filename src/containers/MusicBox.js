@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import MusicSelector from '../components/MusicSelector';
 import MusicDetail from '../components/MusicDetail';
+import './MusicBox.css'
 
 class MusicBox extends Component {
 
@@ -30,6 +31,7 @@ class MusicBox extends Component {
   render() {
     return(
       <div className="music-box">
+        <h2>Music Top 20</h2>
         <MusicSelector
         songs={this.state.songs}
         onSongSelected={this.handleSongSelected}
