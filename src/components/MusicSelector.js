@@ -5,8 +5,12 @@ const MusicSelector = (props) => {
     return <option value={index} key={index}>{song["im:name"].label}</option>
   });
 
+  function handleChange(event)  {
+    props.onSongSelected(event.target.value);
+  }
+
   return(
-    <select id="music-selector" defaultValue="default">
+    <select id="music-selector" defaultValue="default" onChange={handleChange}>
       <option disabled value="default">Choose a song...</option>
       {options}
     </select>

@@ -32,8 +32,10 @@ handleSongSelected(index) {
     return(
       <div>
         <MusicSelector
-        songs={this.state.songs}/>
-        <MusicDetail />
+        songs={this.state.songs}
+        onSongSelected={this.handleSongSelected}
+        />
+        <MusicDetail song = {this.state.currentSong}/>
       </div>
     );
   }
