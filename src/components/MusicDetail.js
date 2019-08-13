@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 const MusicDetail = (props) => {
+  if (!props.song) return null;
   return(
-    <h3>
-      Some music detail
-    </h3>
+    <Fragment>
+    <h3>{props.song['im:name'].label}</h3>
+    <p> Artist: {props.song['im:artist'].label} </p>
+    <p> Chart Position: {props.position}</p>
+    </Fragment>
   )
 }
 

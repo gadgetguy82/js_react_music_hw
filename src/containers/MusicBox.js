@@ -10,7 +10,8 @@ constructor(props) {
   super(props);
   this.state = {
     songs: [],
-    currentSong: null
+    currentSong: null,
+    position: 0
   };
   this.handleSongSelected = this.handleSongSelected.bind(this);
 }
@@ -25,7 +26,7 @@ componentDidMount() {
 
 handleSongSelected(index) {
   const selectedSong = this.state.songs[index];
-  this.setState({currentSong: selectedSong});
+  this.setState({currentSong: selectedSong, position: parseInt(index) + 1});
 }
 
   render() {
@@ -35,7 +36,10 @@ handleSongSelected(index) {
         songs={this.state.songs}
         onSongSelected={this.handleSongSelected}
         />
-        <MusicDetail song = {this.state.currentSong}/>
+        <MusicDetail
+        song = {this.state.currentSong}
+        position = {this.state.position}
+        />
       </div>
     );
   }
